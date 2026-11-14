@@ -21,6 +21,11 @@ const SITE_CONFIG = {
 
 // API站点配置
 const API_SITES = {
+    // ---------- A 组：实测端到端可播（m3u8 直连 200） ----------
+    bfzyapp: {
+        api: 'https://app.bfzyapi.com',
+        name: '暴风APP',
+    },
     bfzy: {
         api: 'https://bfzyapi.com',
         name: '暴风资源',
@@ -37,10 +42,41 @@ const API_SITES = {
         api: 'https://api.apibdzy.com',
         name: '豆瓣资源',
     },
+    piaoling: {
+        api: 'https://p2100.net',
+        name: '飘零资源',
+    },
+    modudm: {
+        api: 'https://caiji.moduapi.cc',
+        name: '魔都动漫',
+    },
+    wujin: {
+        api: 'https://api.wujinapi.com',
+        name: '无尽资源',
+    },
+    miyuan: {
+        api: 'https://iqiyizyapi.com',
+        name: '蜜源资源',
+    },
+    lsb: {
+        api: 'https://apilsbzy1.com',
+        name: 'lsb资源',
+        adult: true
+    },
+
+    // ---------- B 组：源可用（搜索/详情正常），播放链需经 /proxy/ 代理 ----------
     ffzy: {
         api: 'https://api.ffzyapi.com',
         name: '非凡资源',
         detail: 'https://api.ffzyapi.com'
+    },
+    ffzycj: {
+        api: 'https://cj.ffzyapi.com',
+        name: '非凡采集',
+    },
+    ffzyold: {
+        api: 'https://ffzy.tv',
+        name: '非凡线路2',
     },
     dytt: {
         api: 'https://caiji.dyttzyapi.com',
@@ -59,12 +95,58 @@ const API_SITES = {
         api: 'https://api.ukuapi88.com',
         name: 'U酷资源',
     },
-    lsb: {
-        api: 'https://apilsbzy1.com',
-        name: 'lsb资源',
-        adult: true
+    guangsu: {
+        api: 'https://api.guangsuapi.com',
+        name: '光速资源',
+    },
+    aidan: {
+        api: 'https://www.lovedan.net',
+        name: '艾旦资源',
+    },
+    hongniu: {
+        api: 'https://www.hongniuzy2.com',
+        name: '红牛资源',
+    },
+    hongniu3: {
+        api: 'https://www.hongniuzy3.com',
+        name: '红牛资源3',
+    },
+    hongniu4: {
+        api: 'https://www.hongniuzy4.com',
+        name: '红牛资源4',
+    },
+    huya: {
+        api: 'https://www.huyaapi.com',
+        name: '虎牙资源',
+    },
+    subo: {
+        api: 'https://subocaiji.com',
+        name: '速播资源',
+    },
+    jinying: {
+        api: 'https://jinyingzy.com',
+        name: '金鹰资源',
+    },
+    jyzy: {
+        api: 'https://jyzyapi.com',
+        name: '鲸鱼资源',
+    },
+    haitun: {
+        api: 'https://hhzyapi.com',
+        name: '海豚资源',
+    },
+
+    // ---------- C 组：同站镜像（主域名异常时兜底，结果与主站重复） ----------
+    jinying2: {
+        api: 'https://www.jinyingzy.com',
+        name: '金鹰镜像',
+    },
+    jyzy2: {
+        api: 'https://www.jyzyapi.com',
+        name: '鲸鱼镜像',
     }
 };
+
 // 添加聚合搜索的配置选项
 const AGGREGATED_SEARCH_CONFIG = {
     enabled: true,             // 是否启用聚合搜索
